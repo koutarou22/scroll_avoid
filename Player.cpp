@@ -18,7 +18,7 @@ void Player::Initialize()
 	transform_.position_.z = 1.5;
 	transform_.position_.y = 0.5;
 
-	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.5f);
+	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.2f);
 	AddCollider(collision);
 }
 

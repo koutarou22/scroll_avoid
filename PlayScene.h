@@ -3,6 +3,12 @@
 class PlayScene :
     public GameObject
 {
+private:
+	int CoolTimer = 0; 
+	int MaxTime = 240;
+	float spacing = 0.5;
+	int randame = rand() % 3;
+
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）

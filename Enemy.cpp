@@ -14,7 +14,7 @@ void Enemy::Initialize()
 	assert(hModel_ >= 0);
 
 	transform_.position_.x = 0.5;
-	transform_.position_.z = 15.5;
+	transform_.position_.z = 45.5;
 	transform_.position_.y = 0.7;
 
 	transform_.rotate_.x = 180;
