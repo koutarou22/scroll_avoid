@@ -16,10 +16,6 @@ void PlayScene::Initialize()
 	Instantiate<Road>(this);
 	Instantiate<Player>(this);
 
-	float spacing = 0.5;
-	int randame = rand() % 3;
-
-
 	switch (randame)
 	{
 	  case 0:
@@ -70,8 +66,10 @@ void PlayScene::Update()
         MaxTime -= 10;
         if (MaxTime < 30) {
             MaxTime = 30;
-            
         }   
+       
+        randame = (lastLane + rand() % 2 + 1) % 3;
+        lastLane = randame;
 
         Enemy* p = nullptr;
         Enemy* p2 = nullptr;
@@ -99,8 +97,8 @@ void PlayScene::Update()
             p = Instantiate<Enemy>(this);
             p->SetPosition(-0.5, 0.7, 15.5);
 
-            p = Instantiate<Enemy>(this);
-            p->SetPosition(1.5, 0.7, 15.5);
+            p2 = Instantiate<Enemy>(this);
+            p2->SetPosition(1.5, 0.7, 15.5);
             break;
 
         default:
