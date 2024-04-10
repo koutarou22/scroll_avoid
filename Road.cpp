@@ -4,6 +4,8 @@
 
 Road::Road(GameObject* parent)
 {
+    RoadWidth_ = 3;
+    RoadHight_ = 50;
 }
 
 void Road::Initialize()
@@ -11,15 +13,14 @@ void Road::Initialize()
     hModel_ = Model::Load("Floor.fbx");
     assert(hModel_ >= 0);
 
-    Camera::SetPosition({ 0.5, 1.5,-2.5 });
+    Camera::SetPosition({ 0.5, 2.5,-5.5 });
     Camera::SetTarget({ 0.5, 1, 0 });
 
 }
 
 void Road::Update()
 {
-    RoadWidth_ = 3;
-    RoadHight_ = 90;
+    
 }
 
 void Road::Draw()
@@ -29,8 +30,8 @@ void Road::Draw()
         for (int x = 0; x < RoadWidth_; x++)
         {
 
-            transform_.position_.x = x;
-            transform_.position_.z = z;
+           transform_.position_.x = x;
+           transform_.position_.z = z;
            
            Model::SetTransform(hModel_, transform_);
            Model::Draw(hModel_);

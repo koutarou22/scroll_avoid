@@ -1,18 +1,14 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Player :
+class TitleScene :
     public GameObject
 {
 private:
-    int hModel_;
-
-	//見えない壁
-	float Stop_R =  1.5;
-	float Stop_L = -0.5;
-
+	int hImage_;
 public:
-
-	Player(GameObject* parent);
+	//コンストラクタ
+	//引数：parent  親オブジェクト（SceneManager）
+	TitleScene(GameObject* parent);
 
 	//初期化
 	void Initialize() override;
@@ -26,6 +22,5 @@ public:
 	//開放
 	void Release() override;
 
-	void OnCollision(GameObject* pTarget) override;
 };
 

@@ -2,6 +2,7 @@
 #include "Road.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Engine/SceneManager.h"
 
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent, "PlayScene")
@@ -17,6 +18,11 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
+	//if (FindObject("Player") == nullptr)
+	//{
+	//	SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+	//	pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
+	//}
 }
 
 void PlayScene::Draw()

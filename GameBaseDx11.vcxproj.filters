@@ -27,6 +27,12 @@
     <Filter Include="Sample">
       <UniqueIdentifier>{a8eced95-b9e6-4858-9dd0-b338645c18fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{7eb6993a-7a91-4967-ab3e-e8fc6d3d7155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{cd8c24ef-150b-41d1-8403-ad8c29445d57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\BoxCollider.cpp">
@@ -98,12 +104,26 @@
     <ClCompile Include="Engine\VFX.cpp">
       <Filter>01Engine\ResourceManager</Filter>
     </ClCompile>
-    <ClCompile Include="Road.cpp" />
-    <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="TestScene.cpp">
       <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Road.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
+      <Filter>GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,12 +196,26 @@
     <ClInclude Include="Engine\VFX.h">
       <Filter>01Engine\ResourceManager</Filter>
     </ClInclude>
-    <ClInclude Include="Road.h" />
-    <ClInclude Include="PlayScene.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="TestScene.h">
       <Filter>Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Road.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverScene.h">
+      <Filter>GameScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

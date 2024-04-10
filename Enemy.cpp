@@ -1,6 +1,7 @@
 #include "Enemy.h"
 #include "Engine/Model.h"
 
+
 Enemy::Enemy(GameObject* parent)
 {
 }
@@ -15,14 +16,17 @@ void Enemy::Initialize()
 	transform_.position_.y = 0.7;
 
 	transform_.rotate_.x = 180;
+
 }
 
 void Enemy::Update()
 {
-	XMVECTOR vFront = { 0,0,0,1 };
-	XMVECTOR move{ 0,0,0,0 };
-
 	transform_.position_.z -= 0.05;
+
+	if (transform_.position_.z <= 0)//‚»‚Ì”ÍˆÍ‚ð’´‚¦‚½‚çÁ–Å
+	{
+		KillMe();
+	}
 }
 
 void Enemy::Draw()
@@ -33,4 +37,9 @@ void Enemy::Draw()
 
 void Enemy::Release()
 {
+}
+
+void Enemy::OnCollision(GameObject* pTarget)
+{
+
 }
