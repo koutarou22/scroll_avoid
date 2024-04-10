@@ -19,7 +19,7 @@ void Road::Initialize()
 void Road::Update()
 {
     RoadWidth_ = 3;
-    RoadHight_ = 20;
+    RoadHight_ = 90;
 }
 
 void Road::Draw()

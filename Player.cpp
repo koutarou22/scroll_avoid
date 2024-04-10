@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Engine/Model.h"
+#include "Engine/Input.h"
 Player::Player(GameObject* parent)
 {
 }
@@ -16,6 +17,27 @@ void Player::Initialize()
 
 void Player::Update()
 {
+
+	if (Input::IsKey(DIK_RIGHT) || Input::IsKey(DIK_D))
+	{
+			transform_.position_.x += 0.1;
+	
+		if (transform_.position_.x >= 1.5)
+	    {
+			transform_.position_.x = 1.5;
+	    }
+	}
+
+	if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_A))
+	{
+            transform_.position_.x -= 0.1;
+
+		if (transform_.position_.x <= -0.5)
+        {
+	        transform_.position_.x = -0.5;
+	    }
+	}
+	
 }
 
 void Player::Draw()
