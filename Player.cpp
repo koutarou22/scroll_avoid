@@ -5,6 +5,7 @@
 #include "Engine/SphereCollider.h"
 
 Player::Player(GameObject* parent)
+	:GameObject(parent, "Player"), hModel_(-1)
 {
 }
 
@@ -17,7 +18,7 @@ void Player::Initialize()
 	transform_.position_.z = 1.5;
 	transform_.position_.y = 0.5;
 
-	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 4.0f);
+	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.5f);
 	AddCollider(collision);
 }
 
@@ -58,8 +59,5 @@ void Player::Release()
 
 void Player::OnCollision(GameObject* pTarget)
 {
-	if (pTarget->GetObjectName() == "Enemy") {
-		this->KillMe();
-		pTarget->KillMe();
-	}
+	KillMe();
 }

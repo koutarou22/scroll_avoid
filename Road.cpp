@@ -3,6 +3,7 @@
 #include "Engine/Camera.h"
 
 Road::Road(GameObject* parent)
+    :GameObject(parent, "Road"), hModel_(-1)
 {
     RoadWidth_ = 3;
     RoadHight_ = 50;
