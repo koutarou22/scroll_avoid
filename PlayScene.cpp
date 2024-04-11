@@ -23,7 +23,7 @@ void PlayScene::Initialize()
 		for (int i = -1; i < 1; i++)
 		{
 			Enemy* p = Instantiate<Enemy>(this);
-			p->SetPosition(i + spacing, 0.7, 15.5);
+			p->SetPosition(i + spacing, 0.7, 70.5);
 		}
 		break;
 
@@ -32,17 +32,17 @@ void PlayScene::Initialize()
 		for (int i = 0; i < 2; i++)
 		{
 			Enemy* p = Instantiate<Enemy>(this);
-			p->SetPosition(i + spacing, 0.7, 15.5);
+			p->SetPosition(i + spacing, 0.7, 70.5);
 		}
 		break;
 
 	  case 2:
 
 		Enemy* LEnemy = Instantiate<Enemy>(this);
-		LEnemy->SetPosition(-0.5, 0.7, 15.5);
+		LEnemy->SetPosition(-0.5, 0.7, 70.5);
 
 		Enemy* REnemy = Instantiate<Enemy>(this);
-		REnemy->SetPosition(1.5, 0.7, 15.5);
+		REnemy->SetPosition(1.5, 0.7, 70.5);
 
 		break;
 		
@@ -63,7 +63,7 @@ void PlayScene::Update()
     {
          CoolTimer = 0; // timer‚ÌƒŠƒZƒbƒg
     
-        MaxTime -= 10;
+        MaxTime -= 15;
         if (MaxTime < 30) {
             MaxTime = 30;
         }   
@@ -80,7 +80,7 @@ void PlayScene::Update()
             for (int i = 0; i < 2; i++)
             {
                 p = Instantiate<Enemy>(this);
-                p->SetPosition(i + spacing, 0.7, 15.5);
+                p->SetPosition(i + spacing, 0.5, 70.5);
             }
             break;
 
@@ -88,17 +88,17 @@ void PlayScene::Update()
             for (int i = -1; i < 1; i++)
             {
                 p = Instantiate<Enemy>(this);
-                p->SetPosition(i + spacing, 0.7, 15.5);
+                p->SetPosition(i + spacing, 0.5, 70.5);
             }
             break;
 
         case 2: 
 
             p = Instantiate<Enemy>(this);
-            p->SetPosition(-0.5, 0.7, 15.5);
+            p->SetPosition(-0.5, 0.5, 70.5);
 
-            p2 = Instantiate<Enemy>(this);
-            p2->SetPosition(1.5, 0.7, 15.5);
+            p = Instantiate<Enemy>(this);
+            p->SetPosition(1.5, 0.5, 70.5);
             break;
 
         default:

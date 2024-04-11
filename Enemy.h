@@ -6,6 +6,9 @@ class Enemy :
 private:
 	int hModel_;
 public:
+
+	float EnemyP_Z = 70.5;
+
 	Enemy(GameObject* parent);
 
 	//‰Šú‰»
@@ -21,5 +24,6 @@ public:
 	void Release() override;
 
 	void OnCollision(GameObject* pTarget) override;
+
 };
 

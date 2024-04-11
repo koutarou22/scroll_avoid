@@ -6,7 +6,7 @@ Road::Road(GameObject* parent)
     :GameObject(parent, "Road"), hModel_(-1)
 {
     RoadWidth_ = 3;
-    RoadHight_ = 50;
+    RoadHight_ = 80;
 }
 
 void Road::Initialize()
@@ -14,8 +14,8 @@ void Road::Initialize()
     hModel_ = Model::Load("Floor.fbx");
     assert(hModel_ >= 0);
 
-    Camera::SetPosition({ 0.5, 2.5,-5.5 });
-    Camera::SetTarget({ 0.5, 1, 0 });
+    Camera::SetPosition({ 0.5, 2.5,-1.5 });
+    Camera::SetTarget({ 0.5, 2, 0 });
 
 }
 

@@ -11,7 +11,7 @@ Player::Player(GameObject* parent)
 
 void Player::Initialize()
 {
-	hModel_ = Model::Load("box.fbx");
+	hModel_ = Model::Load("Player.fbx");
 	assert(hModel_ >= 0);
 
 	transform_.position_.x = 0.5;
@@ -27,7 +27,7 @@ void Player::Update()
 
 	if (Input::IsKey(DIK_RIGHT) || Input::IsKey(DIK_D))
 	{
-			transform_.position_.x += 0.1;
+			transform_.position_.x += 0.05;
 	
 		if (transform_.position_.x >= Stop_R)
 	    {
@@ -37,7 +37,7 @@ void Player::Update()
 
 	if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_A))
 	{
-            transform_.position_.x -= 0.1;
+            transform_.position_.x -= 0.05;
 
 		if (transform_.position_.x <= Stop_L)
         {

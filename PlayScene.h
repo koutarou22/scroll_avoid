@@ -8,7 +8,7 @@ private:
 	int MaxTime = 240;
 	float spacing = 0.5;//間隔
 	int randame = rand() % 3;//ランダムに三通り選ばれる
-	int lastLane = -1;
+	int lastLane = -1;//同じパターンが出ないようにする対策
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）
@@ -25,5 +25,6 @@ public:
 
 	//開放
 	void Release() override;
+
 };
 
