@@ -27,7 +27,7 @@ void Player::Update()
 
 	if (Input::IsKey(DIK_RIGHT) || Input::IsKey(DIK_D))
 	{
-			transform_.position_.x += 0.05;
+			transform_.position_.x += 0.06;
 	
 		if (transform_.position_.x >= Stop_R)
 	    {
@@ -37,7 +37,7 @@ void Player::Update()
 
 	if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_A))
 	{
-            transform_.position_.x -= 0.05;
+            transform_.position_.x -= 0.06;
 
 		if (transform_.position_.x <= Stop_L)
         {

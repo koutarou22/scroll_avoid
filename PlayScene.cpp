@@ -63,7 +63,7 @@ void PlayScene::Update()
     {
          CoolTimer = 0; // timer‚ÌƒŠƒZƒbƒg
     
-        MaxTime -= 15;
+        MaxTime -= 16;
         if (MaxTime < 30) {
             MaxTime = 30;
         }   
