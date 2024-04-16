@@ -14,9 +14,7 @@ void Player::Initialize()
 	hModel_ = Model::Load("Player.fbx");
 	assert(hModel_ >= 0);
 
-	transform_.position_.x = 0.5;
-	transform_.position_.z = 1.5;
-	transform_.position_.y = 0.5;
+	transform_.position_ = XMFLOAT3(0.5, 0.5, 1.5);
 
 	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.2f);
 	AddCollider(collision);

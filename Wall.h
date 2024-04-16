@@ -1,18 +1,18 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Player :
-    public GameObject
+class Wall :
+	public GameObject
 {
 private:
-    int hModel_;
-
-	//å©Ç¶Ç»Ç¢ï«
-	float Stop_R =  1.3;
-	float Stop_L = -0.25;
+	int hModel_;
+	int WallRoad_;
+	int WallHigh_;
 
 public:
 
-	Player(GameObject* parent);
+	
+
+	Wall(GameObject* parent);
 
 	//èâä˙âª
 	void Initialize() override;
@@ -25,7 +25,4 @@ public:
 
 	//äJï˙
 	void Release() override;
-
-	void OnCollision(GameObject* pTarget) override;
 };
-

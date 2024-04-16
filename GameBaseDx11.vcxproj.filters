@@ -125,7 +125,9 @@
     <ClCompile Include="GameOverScene.cpp">
       <Filter>GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyGroup.cpp" />
+    <ClCompile Include="Wall.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -215,9 +217,11 @@
     <ClInclude Include="GameOverScene.h">
       <Filter>GameScene</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyGroup.h" />
     <ClInclude Include="TitleScene.h">
       <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

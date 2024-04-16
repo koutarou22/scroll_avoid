@@ -1,10 +1,9 @@
 #include "PlayScene.h"
 #include "Road.h"
+#include "Wall.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Engine/SceneManager.h"
-
-float CoolTimer = 0;
 
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent, "PlayScene")
@@ -14,16 +13,23 @@ PlayScene::PlayScene(GameObject* parent)
 void PlayScene::Initialize()
 {
 	Instantiate<Road>(this);
+   
+    Wall* leftWall = Instantiate<Wall>(this);
+    leftWall->SetPosition(-1.05, ObjectY_, WallZ_);
+
+    Wall* rightWall = Instantiate<Wall>(this);
+    rightWall->SetPosition(2.05, ObjectY_, WallZ_);
+
 	Instantiate<Player>(this);
 
-	switch (randame)
+	switch (Rand)
 	{
 	  case 0:
 
 		for (int i = -1; i < 1; i++)
 		{
 			Enemy* p = Instantiate<Enemy>(this);
-			p->SetPosition(i + spacing, 0.7, 70.5);
+			p->SetPosition(i + space_, ObjectY_, EnemyZ_);
 		}
 		break;
 
@@ -32,82 +38,80 @@ void PlayScene::Initialize()
 		for (int i = 0; i < 2; i++)
 		{
 			Enemy* p = Instantiate<Enemy>(this);
-			p->SetPosition(i + spacing, 0.7, 70.5);
+			p->SetPosition(i + space_, ObjectY_, EnemyZ_);
 		}
 		break;
 
 	  case 2:
 
 		Enemy* LEnemy = Instantiate<Enemy>(this);
-		LEnemy->SetPosition(-0.5, 0.7, 70.5);
+		LEnemy->SetPosition(-0.5, ObjectY_, EnemyZ_);
 
 		Enemy* REnemy = Instantiate<Enemy>(this);
-		REnemy->SetPosition(1.5, 0.7, 70.5);
+		REnemy->SetPosition(1.5, ObjectY_, EnemyZ_);
 
-		break;
-		
+		break;	
 	}
-
 }
 
 void PlayScene::Update()
 {
- 
 
     if (FindObject("Player") == nullptr)
     {
         SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
         pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
     }
-    else if (CoolTimer >= MaxTime) //『フレーム』で処理
+    else if (CoolTimer_ >= MaxTime_) //『フレーム』で処理
     {
-         CoolTimer = 0; // timerのリセット
+         CoolTimer_ = 0; // timerのリセット
     
-        MaxTime -= 16;
-        if (MaxTime < 30) {
-            MaxTime = 30;
+        MaxTime_ -= 15;
+
+        if (MaxTime_ < 40) {
+            MaxTime_ = 40;
         }   
-       
-        randame = (lastLane + rand() % 2 + 1) % 3;
-        lastLane = randame;
+
+        Rand = (lastLane_ + rand() % 2 + 1) % 3;
+        lastLane_ = Rand;
 
         Enemy* p = nullptr;
-        Enemy* p2 = nullptr;
 
-        switch (randame)
-        {
-        case 0: 
-            for (int i = 0; i < 2; i++)
-            {
-                p = Instantiate<Enemy>(this);
-                p->SetPosition(i + spacing, 0.5, 70.5);
-            }
-            break;
+		switch (Rand)
+		{
+		case 0:
 
-        case 1: 
-            for (int i = -1; i < 1; i++)
-            {
-                p = Instantiate<Enemy>(this);
-                p->SetPosition(i + spacing, 0.5, 70.5);
-            }
-            break;
+			for (int i = -1; i < 1; i++)
+			{
+				Enemy* p = Instantiate<Enemy>(this);
+				p->SetPosition(i + space_, ObjectY_, EnemyZ_);
+			}
+			break;
 
-        case 2: 
+		case 1:
 
-            p = Instantiate<Enemy>(this);
-            p->SetPosition(-0.5, 0.5, 70.5);
+			for (int i = 0; i < 2; i++)
+			{
+				Enemy* p = Instantiate<Enemy>(this);
+				p->SetPosition(i + space_, ObjectY_, EnemyZ_);
+			}
+			break;
 
-            p = Instantiate<Enemy>(this);
-            p->SetPosition(1.5, 0.5, 70.5);
-            break;
+		case 2:
 
-        default:
-            break;
-        }
+			Enemy * LEnemy = Instantiate<Enemy>(this);
+			LEnemy->SetPosition(-0.5, ObjectY_, EnemyZ_);
+
+			Enemy* REnemy = Instantiate<Enemy>(this);
+			REnemy->SetPosition(1.5, ObjectY_, EnemyZ_);
+
+			break;
+
+		}
     }
     else
     {
-        CoolTimer++;
+        CoolTimer_++;
     }
 }
 

@@ -5,9 +5,10 @@ class Enemy :
 {
 private:
 	int hModel_;
-public:
+	double DefaultSpeed_ = 0.55f;
 
-	float EnemyP_Z = 70.5;
+public:
+	
 
 	Enemy(GameObject* parent);
 

@@ -4,11 +4,16 @@ class PlayScene :
     public GameObject
 {
 private:
-	int CoolTimer = 0; 
-	int MaxTime = 240;
-	float spacing = 0.5;//間隔
-	int randame = rand() % 3;//ランダムに三通り選ばれる
-	int lastLane = -1;//同じパターンが出ないようにする対策
+	int CoolTimer_ = 0; 
+	int MaxTime_ = 240;
+	int Rand = rand() % 3;//ランダムに三通り選ばれる
+	int lastLane_ = -1;//同じパターンが出ないようにする対策
+
+	float ObjectY_ = 0.7;
+	float WallZ_ = 2.5;
+	float EnemyZ_ = 70.5;
+	float space_ = 0.5;//間隔
+	
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）
@@ -25,6 +30,8 @@ public:
 
 	//開放
 	void Release() override;
+
+
 
 };
 

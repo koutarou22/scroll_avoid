@@ -2,6 +2,7 @@
 #include "Engine/Model.h"
 #include "Engine/SphereCollider.h"
 
+
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
 {
@@ -9,12 +10,13 @@ Enemy::Enemy(GameObject* parent)
 
 void Enemy::Initialize()
 {
-	hModel_ = Model::Load("box.fbx");
+	hModel_ = Model::Load("character-orc.fbx");
 	assert(hModel_ >= 0);
 
-	transform_.position_.x = 0.5;
-	transform_.position_.z = 70.5;
-	transform_.position_.y = 0.7;
+	transform_.scale_ = XMFLOAT3(0.015f, 0.015f, 0.015f);
+	transform_.rotate_.y = 180;
+
+	transform_.position_ = XMFLOAT3(0.5, 0.7, 0.7);
 
 	SphereCollider* collision = new SphereCollider(XMFLOAT3(0, 0, 0), 0.5f);
 	AddCollider(collision);
@@ -22,7 +24,7 @@ void Enemy::Initialize()
 
 void Enemy::Update()
 {
-	transform_.position_.z -= 0.7;
+	transform_.position_.z -= DefaultSpeed_;
 
 	if (transform_.position_.z <= 0)//‚»‚Ì”ÍˆÍ‚ð’´‚¦‚½‚çÁ–Å
 	{
