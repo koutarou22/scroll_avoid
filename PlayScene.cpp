@@ -1,6 +1,7 @@
 #include "PlayScene.h"
 #include "Road.h"
 #include "Wall.h"
+#include "HP.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Engine/SceneManager.h"
@@ -13,6 +14,7 @@ PlayScene::PlayScene(GameObject* parent)
 void PlayScene::Initialize()
 {
 	Instantiate<Road>(this);
+	Instantiate<HP>(this);
    
     Wall* leftWall = Instantiate<Wall>(this);
     leftWall->SetPosition(-1.05, ObjectY_, WallZ_);

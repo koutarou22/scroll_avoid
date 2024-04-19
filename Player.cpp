@@ -11,7 +11,7 @@ Player::Player(GameObject* parent)
 
 void Player::Initialize()
 {
-	hModel_ = Model::Load("Player.fbx");
+	hModel_ = Model::Load("PlayerM.fbx");
 	assert(hModel_ >= 0);
 
 	transform_.position_ = XMFLOAT3(0.5, 0.5, 1.5);

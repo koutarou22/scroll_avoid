@@ -128,6 +128,9 @@
     <ClCompile Include="Wall.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="HP.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -221,6 +224,9 @@
       <Filter>GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Wall.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="HP.h">
       <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,16 +1,14 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Wall :
-	public GameObject
+class HP :
+    public GameObject
 {
 private:
-	int hModel_;
-	int WallRoad_;
-	int WallHigh_;
+	int hImage_;
 
 public:
 
-	Wall(GameObject* parent);
+	HP(GameObject* parent);
 
 	//‰Šú‰»
 	void Initialize() override;
@@ -24,3 +22,4 @@ public:
 	//ŠJ•ú
 	void Release() override;
 };
+
