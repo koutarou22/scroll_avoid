@@ -5,12 +5,15 @@ class Player :
 {
 private:
     int hModel_;
+	
 
 	//Œ©‚¦‚È‚¢•Ç
 	float Stop_R =  1.3;
 	float Stop_L = -0.25;
 
 public:
+
+	int Hp_;
 
 	Player(GameObject* parent);
 

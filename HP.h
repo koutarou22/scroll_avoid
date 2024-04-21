@@ -5,6 +5,7 @@ class HP :
 {
 private:
 	int hImage_;
+	float Wide_ = 3;
 
 public:
 

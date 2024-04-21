@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Hp.h"
 #include "Engine/Model.h"
 #include "Engine/Input.h"
 #include "Engine/SceneManager.h"
@@ -18,6 +19,8 @@ void Player::Initialize()
 
 	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.2f);
 	AddCollider(collision);
+
+	Hp_ = 3;
 }
 
 void Player::Update()
@@ -57,5 +60,11 @@ void Player::Release()
 
 void Player::OnCollision(GameObject* pTarget)
 {
-	KillMe();
+	Hp_--;
+
+	if (Hp_ <= 0)
+	{
+		KillMe();
+	}
+	
 }
