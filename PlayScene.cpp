@@ -6,6 +6,7 @@
 #include "Enemy.h"
 #include "Engine/SceneManager.h"
 
+
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent, "PlayScene")
 {
@@ -68,10 +69,10 @@ void PlayScene::Update()
     {
          CoolTimer_ = 0; // timer‚ÌƒŠƒZƒbƒg
     
-        MaxTime_ -= 15;
+        MaxTime_ -= 40;
 
-        if (MaxTime_ < 40) {
-            MaxTime_ = 40;
+        if (MaxTime_ < 30) {
+            MaxTime_ = 30;
         }   
 
         Rand = (lastLane_ + rand() % 2 + 1) % 3;

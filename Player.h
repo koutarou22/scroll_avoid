@@ -5,6 +5,7 @@ class Player :
 {
 private:
     int hModel_;
+	float NDTIME_; //–³“GŠÔ
 	
 
 	//Œ©‚¦‚È‚¢•Ç
@@ -14,7 +15,7 @@ private:
 public:
 
 	int Hp_;
-
+	
 	Player(GameObject* parent);
 
 	//‰Šú‰»
