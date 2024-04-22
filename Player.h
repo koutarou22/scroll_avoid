@@ -1,12 +1,13 @@
 #pragma once
 #include "Engine/GameObject.h"
+#include "HP.h"
 class Player :
     public GameObject
 {
 private:
     int hModel_;
 	float NDTIME_; //–³“GŽžŠÔ
-	
+	int Hp_;
 
 	//Œ©‚¦‚È‚¢•Ç
 	float Stop_R =  1.3;
@@ -14,7 +15,7 @@ private:
 
 public:
 
-	int Hp_;
+	HP* hp;
 	
 	Player(GameObject* parent);
 

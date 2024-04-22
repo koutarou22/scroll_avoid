@@ -5,7 +5,7 @@ class HP :
 {
 private:
 	int hImage_;
-	float Wide_ = 3;
+	int Wide_ = 3;
 
 public:
 
@@ -22,5 +22,7 @@ public:
 
 	//ŠJ•ú
 	void Release() override;
+
+	void DamageHp();//Player‚Å‘€ì‚µ‚½‚¢
 };
 
