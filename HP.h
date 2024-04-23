@@ -5,6 +5,7 @@ class HP :
 {
 private:
 	int hImage_;
+	int bagImage_;
 	int Wide_ = 3;
 
 public:

@@ -5,7 +5,7 @@
 
 
 HP::HP(GameObject* parent)
-	:GameObject(parent, "HP")
+	:GameObject(parent, "HP"),hImage_(-1),bagImage_(-1)
 {
 	
 }
@@ -16,10 +16,15 @@ void HP::Initialize()
 
 void HP::Update()
 {
-	hImage_ = Image::Load("HP.png");
-	assert(hImage_ >= 0);
+    bagImage_ = Image::Load("Image/BackImage.png");
+    assert(bagImage_ >= 0);
 
-	transform_.position_ = XMFLOAT3(-0.9, 0.87, 0);
+    transform_.scale_ = XMFLOAT3(0.9, 0.9, 0.9);
+
+	hImage_ = Image::Load("Image/HP.png");
+    assert(hImage_ >= 0);
+
+	transform_.position_ = XMFLOAT3(-0.85, 0.88, 0);
 }
 
 void HP::DamageHp()
@@ -29,11 +34,17 @@ void HP::DamageHp()
         Wide_--;
 
     }
+
+  /*  Debug::Log("‰æ‘œ‚ª");
     Debug::Log(Wide_);
+    Debug::Log("–‡Œ¸‚é");*/
 }
 
 void HP::Draw()
 {
+    Image::SetTransform(bagImage_, transform_);
+    Image::Draw(bagImage_);
+
     float heartWidth = 0.13;
 
     for (int i = 0; i < Wide_; i++)

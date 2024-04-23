@@ -12,7 +12,7 @@ Wall::Wall(GameObject* parent)
 
 void Wall::Initialize()
 {
-    hModel_ = Model::Load("box.fbx");
+    hModel_ = Model::Load("Model/box.fbx");
     assert(hModel_ >= 0);
 
     transform_.scale_ = XMFLOAT3(0.2f, 1.7f, 2.0f);

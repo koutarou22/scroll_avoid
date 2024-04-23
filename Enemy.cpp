@@ -10,7 +10,7 @@ Enemy::Enemy(GameObject* parent)
 
 void Enemy::Initialize()
 {
-	hModel_ = Model::Load("character-orc.fbx");
+	hModel_ = Model::Load("Model/character-orc.fbx");
 	assert(hModel_ >= 0);
 
 	transform_.scale_ = XMFLOAT3(0.015f, 0.015f, 0.015f);

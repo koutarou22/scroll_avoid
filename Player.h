@@ -14,8 +14,6 @@ private:
 	float Stop_L = -0.25;
 
 public:
-
-	HP* hp;
 	
 	Player(GameObject* parent);
 

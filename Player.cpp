@@ -7,17 +7,15 @@
 #include "Engine/Debug.h"
 
 Player::Player(GameObject* parent)
-	:GameObject(parent, "Player"), hModel_(-1),hp(nullptr)
+	:GameObject(parent, "Player"), hModel_(-1)
 {
 	
 }
 
 void Player::Initialize()
 {
-	hModel_ = Model::Load("Player.fbx");
+	hModel_ = Model::Load("Model/Player.fbx");
 	assert(hModel_ >= 0);
-
-	hp = new HP(this);
 
 	transform_.position_ = XMFLOAT3(0.5, 0.5, 1.5);
 	transform_.scale_ = XMFLOAT3(1.0, 1.0, 1.0);
@@ -27,8 +25,6 @@ void Player::Initialize()
 
 	Hp_ = 3;//HP
 	NDTIME_ = 1.0f;//無敵時間
-
-
 }
 
 void Player::Update()
@@ -58,6 +54,8 @@ void Player::Update()
 	{
 		NDTIME_ -= 0.5;
 	}
+
+	
 }
 
 void Player::Draw()
@@ -72,17 +70,17 @@ void Player::Release()
 
 void Player::OnCollision(GameObject* pTarget)
 {
+	HP* hp = (HP*)FindObject("HP");
+
 	Debug::Log("残りHP=");
 	Debug::Log(Hp_);
 
-	hp->Draw();
 	if (NDTIME_ <= 0.0f)
 	{
+
 		hp->DamageHp();
 		Hp_--;
-		NDTIME_ = 1.0f;
-
-		
+		NDTIME_ = 1.0f;//ここでリセット
 
 		if (Hp_ <= 0)
 		{

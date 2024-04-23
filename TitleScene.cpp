@@ -20,7 +20,7 @@ void TitleScene::Update()
 		pSceneManager->ChangeScene(SCENE_ID_PLAY);
 	}
 
-	hImage_ = Image::Load("Title.jpg");
+	hImage_ = Image::Load("Image/Title.jpg");
 	assert(hImage_ >= 0);
 }
 

@@ -11,7 +11,7 @@ Road::Road(GameObject* parent)
 
 void Road::Initialize()
 {
-    hModel_ = Model::Load("floor.fbx");
+    hModel_ = Model::Load("Model/floor.fbx");
     assert(hModel_ >= 0);
 
     Camera::SetPosition({ 0.5, 2.5,-1.5 });

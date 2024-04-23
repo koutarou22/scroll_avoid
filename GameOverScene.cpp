@@ -20,7 +20,7 @@ void GameOverScene::Update()
 		pSceneManager->ChangeScene(SCENE_ID_TITLE);
 	}
 
-	hImage_ = Image::Load("GameOver.jpg");
+	hImage_ = Image::Load("Image/GameOver.jpg");
 	assert(hImage_ >= 0);
 }
 
