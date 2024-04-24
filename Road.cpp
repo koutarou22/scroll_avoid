@@ -1,4 +1,5 @@
 #include "Road.h"
+#include "Player.h"
 #include "Engine/Model.h"
 #include "Engine/Camera.h"
 
@@ -14,8 +15,7 @@ void Road::Initialize()
     hModel_ = Model::Load("Model/floor.fbx");
     assert(hModel_ >= 0);
 
-    Camera::SetPosition({ 0.5, 2.5,-1.5 });
-    Camera::SetTarget({ 0.5, 2, 0 });
+    
 
 }
 

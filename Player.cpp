@@ -5,6 +5,7 @@
 #include "Engine/SceneManager.h"
 #include "Engine/SphereCollider.h"
 #include "Engine/Debug.h"
+#include "Engine/Camera.h"
 
 Player::Player(GameObject* parent)
 	:GameObject(parent, "Player"), hModel_(-1)
@@ -23,8 +24,11 @@ void Player::Initialize()
 	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.2f);
 	AddCollider(collision);
 
-	Hp_ = 3;//HP
+	Hp_ = 10;//HP
 	NDTIME_ = 1.0f;//–³“GŽžŠÔ
+
+	Camera::SetPosition({ 0.5, 2.5,-1.5 });
+	Camera::SetTarget({ 0.5, 2, 0 });
 }
 
 void Player::Update()
@@ -75,8 +79,11 @@ void Player::OnCollision(GameObject* pTarget)
 	Debug::Log("Žc‚èHP=");
 	Debug::Log(Hp_);
 
+	Camera::SetTarget({ 0.5, 2, 0 });
+
 	if (NDTIME_ <= 0.0f)
 	{
+		Camera::SetTarget({ 0.5, 2.03, 0 });
 
 		hp->DamageHp();
 		Hp_--;

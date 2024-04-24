@@ -6,7 +6,7 @@ class HP :
 private:
 	int hImage_;
 	int bagImage_;
-	int Wide_ = 3;
+	int Wide_ = 10;//‘Ì—Í
 
 public:
 
