@@ -131,6 +131,12 @@
     <ClCompile Include="HP.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="ClearScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalUI.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -227,6 +233,12 @@
       <Filter>GameObject</Filter>
     </ClInclude>
     <ClInclude Include="HP.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalUI.h">
       <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>

@@ -13,7 +13,7 @@ void Enemy::Initialize()
 	hModel_ = Model::Load("Model/character-orc.fbx");
 	assert(hModel_ >= 0);
 
-	transform_.scale_ = XMFLOAT3(0.015f, 0.015f, 0.015f);
+	transform_.scale_ = XMFLOAT3(0.013f, 0.013f, 0.013f);
 	transform_.rotate_.y = 180;
 
 	transform_.position_ = XMFLOAT3(0.5, 0.7, 0.7);

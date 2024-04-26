@@ -18,10 +18,10 @@ void Player::Initialize()
 	hModel_ = Model::Load("Model/Player.fbx");
 	assert(hModel_ >= 0);
 
-	transform_.position_ = XMFLOAT3(0.5, 0.5, 1.5);
+	transform_.position_ = XMFLOAT3(0.5, 0.05, 1.5);
 	transform_.scale_ = XMFLOAT3(1.0, 1.0, 1.0);
 
-	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 0.2f);
+	SphereCollider* collision = new SphereCollider({ 0, 0.5, 0 }, 0.2f);
 	AddCollider(collision);
 
 	Hp_ = 10;//HP
@@ -83,7 +83,7 @@ void Player::OnCollision(GameObject* pTarget)
 
 	if (NDTIME_ <= 0.0f)
 	{
-		Camera::SetTarget({ 0.5, 2.03, 0 });
+		Camera::SetTarget({ 0.53, 1.94, 0 });
 
 		hp->DamageHp();
 		Hp_--;

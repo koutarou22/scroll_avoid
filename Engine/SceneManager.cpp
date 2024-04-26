@@ -3,6 +3,7 @@
 #include "../TitleScene.h"
 #include "../PlayScene.h"
 #include "../GameOverScene.h"
+#include "../ClearScene.h"
 
 #include "../TestScene.h"
 #include "Model.h"
@@ -49,6 +50,8 @@ void SceneManager::Update()
 		case SCENE_ID_PLAY: Instantiate<PlayScene>(this); break;
 
 		case SCENE_ID_GAMEOVER: Instantiate<GameOverScene>(this); break;
+
+		case SCENE_ID_CLEAR: Instantiate<ClearScene>(this); break;
 
 		/*case SCENE_ID_TEST: Instantiate<TestScene>(this); break;*/
 

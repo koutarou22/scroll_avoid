@@ -14,9 +14,6 @@ void Road::Initialize()
 {
     hModel_ = Model::Load("Model/floor.fbx");
     assert(hModel_ >= 0);
-
-    
-
 }
 
 void Road::Update()

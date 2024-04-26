@@ -1,17 +1,18 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Wall :
-	public GameObject
+class GoalUI :
+    public GameObject
 {
 private:
-	int hModel_;
-	int WallRoad_;
-	float WallHigh_;
-	
+	int hLimit_;
+	int hFrame_;
 
+
+	int Limitnow_;
+	int MaxLimit_;
 public:
 
-	Wall(GameObject* parent);
+	GoalUI(GameObject* parent);
 
 	//‰Šú‰»
 	void Initialize() override;
@@ -25,3 +26,4 @@ public:
 	//ŠJ•ú
 	void Release() override;
 };
+

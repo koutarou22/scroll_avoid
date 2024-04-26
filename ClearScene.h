@@ -1,17 +1,14 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Wall :
-	public GameObject
+class ClearScene :
+    public GameObject
 {
 private:
-	int hModel_;
-	int WallRoad_;
-	float WallHigh_;
-	
-
+	int hImage_;
 public:
-
-	Wall(GameObject* parent);
+	//コンストラクタ
+	//引数：parent  親オブジェクト（SceneManager）
+	ClearScene(GameObject* parent);
 
 	//初期化
 	void Initialize() override;
@@ -24,4 +21,6 @@ public:
 
 	//開放
 	void Release() override;
+
 };
+
