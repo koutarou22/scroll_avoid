@@ -1,16 +1,14 @@
 #pragma once
 #include "Engine/GameObject.h"
-class HP :
-    public GameObject
+class Gauge :
+	public GameObject
 {
 private:
-	int hImage_;
-	int bagImage_;
-	int Wide_ = 3;//‘Ì—Í
+	int hLimit_;
 
 public:
 
-	HP(GameObject* parent);
+	Gauge(GameObject* parent);
 
 	//‰Šú‰»
 	void Initialize() override;
@@ -24,6 +22,5 @@ public:
 	//ŠJ•ú
 	void Release() override;
 
-	void DamageHp();//Player‚Å‘€ì‚µ‚½‚¢
 };
 

@@ -2,7 +2,8 @@
 #include "Road.h"
 #include "Wall.h"
 #include "HP.h"
-#include "GoalUI.h"
+#include "Frame.h"
+#include "Gauge.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Engine/SceneManager.h"
@@ -15,17 +16,15 @@ PlayScene::PlayScene(GameObject* parent)
 
 void PlayScene::Initialize()
 {
-
 	Instantiate<Wall>(this);
 	
-
 	Wall* rightWall = Instantiate<Wall>(this);
 	rightWall->SetPosition(2.05, ObjectY_, WallZ_);
 
 	Instantiate<Road>(this);
-
 	Instantiate<HP>(this);
-	Instantiate<GoalUI>(this);
+	Instantiate<Frame>(this);
+	Instantiate<Gauge>(this);
 	Instantiate<Player>(this);
 
 	switch (Rand)
@@ -62,25 +61,26 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
-
+	
 	if (FindObject("Player") == nullptr)
 	{
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
 		pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
 	}
-	else if (FindObject("GoalUI") == nullptr)
+	else if (FindObject("Gauge") == nullptr)
 	{
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-		pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
+		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+		
 	}
     else if (CoolTimer_ >= MaxTime_) //『フレーム』で処理
     {
          CoolTimer_ = 0; // timerのリセット
     
-        MaxTime_ -= 40;
+        MaxTime_ -= 20;
 
-        if (MaxTime_ < 30) {
-            MaxTime_ = 30;
+        if (MaxTime_ < 26) {
+            MaxTime_ = 26;
         }   
 
         Rand = (lastLane_ + rand() % 2 + 1) % 3;

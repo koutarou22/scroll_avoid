@@ -55,7 +55,7 @@ void HP::Draw()
             Image::Draw(hImage_);
         }
     }
-    Debug::Log(Wide_);
+   /* Debug::Log(Wide_);*/
 }
 
 

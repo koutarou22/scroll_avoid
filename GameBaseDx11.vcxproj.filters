@@ -134,7 +134,10 @@
     <ClCompile Include="ClearScene.cpp">
       <Filter>GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="GoalUI.cpp">
+    <ClCompile Include="Frame.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Gauge.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>
@@ -238,7 +241,10 @@
     <ClInclude Include="ClearScene.h">
       <Filter>GameScene</Filter>
     </ClInclude>
-    <ClInclude Include="GoalUI.h">
+    <ClInclude Include="Frame.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Gauge.h">
       <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>

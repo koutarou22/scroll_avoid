@@ -1,22 +1,13 @@
 #pragma once
 #include "Engine/GameObject.h"
-class GoalUI :
+class Frame :
     public GameObject
 {
 private:
-	int hLimit_;
 	int hFrame_;
-
-
-	int Limitnow_;
-	int MaxLimit_;
-
-	int Timer_;
-	Transform tr = transform_;
-
 public:
 
-	GoalUI(GameObject* parent);
+	Frame(GameObject* parent);
 
 	//‰Šú‰»
 	void Initialize() override;
@@ -29,8 +20,6 @@ public:
 
 	//ŠJ•ú
 	void Release() override;
-
-	void SetLimit();
 
 };
 

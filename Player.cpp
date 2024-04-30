@@ -24,7 +24,7 @@ void Player::Initialize()
 	SphereCollider* collision = new SphereCollider({ 0, 0.5, 0 }, 0.2f);
 	AddCollider(collision);
 
-	Hp_ = 10;//HP
+	Hp_ = 3;//HP
 	NDTIME_ = 1.0f;//–³“GŽžŠÔ
 
 	Camera::SetPosition({ 0.5, 2.5,-1.5 });

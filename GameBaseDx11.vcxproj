@@ -125,7 +125,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GoalUI.cpp" />
+    <ClCompile Include="Gauge.cpp" />
+    <ClCompile Include="Frame.cpp" />
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Engine\Audio.cpp" />
@@ -161,7 +162,8 @@
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GoalUI.h" />
+    <ClInclude Include="Gauge.h" />
+    <ClInclude Include="Frame.h" />
     <ClInclude Include="ClearScene.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Engine\Audio.h" />

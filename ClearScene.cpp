@@ -21,8 +21,8 @@ void ClearScene::Update()
 		pSceneManager->ChangeScene(SCENE_ID_TITLE);
 	}
 
-	/*hImage_ = Image::Load("Image/GameOver.jpg");
-	assert(hImage_ >= 0);*/
+	hImage_ = Image::Load("Image/Clear.jpg");
+	assert(hImage_ >= 0);
 }
 
 void ClearScene::Draw()
