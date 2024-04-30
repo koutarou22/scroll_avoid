@@ -63,11 +63,16 @@ void PlayScene::Initialize()
 void PlayScene::Update()
 {
 
-    if (FindObject("Player") == nullptr)
-    {
-        SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-        pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
-    }
+	if (FindObject("Player") == nullptr)
+	{
+		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+		pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
+	}
+	else if (FindObject("GoalUI") == nullptr)
+	{
+		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+		pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
+	}
     else if (CoolTimer_ >= MaxTime_) //『フレーム』で処理
     {
          CoolTimer_ = 0; // timerのリセット

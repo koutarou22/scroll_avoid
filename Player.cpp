@@ -41,7 +41,6 @@ void Player::Update()
 		{
 			transform_.position_.x = Stop_R;
 		}
-
 	}
 
 	if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_A))
@@ -79,11 +78,11 @@ void Player::OnCollision(GameObject* pTarget)
 	Debug::Log("Žc‚èHP=");
 	Debug::Log(Hp_);
 
-	Camera::SetTarget({ 0.5, 2, 0 });
+	//Camera::SetTarget({ 0.5, 2, 0 });
 
 	if (NDTIME_ <= 0.0f)
 	{
-		Camera::SetTarget({ 0.53, 1.94, 0 });
+		//Camera::SetTarget({ 0.53, 1.94, 0 });
 
 		hp->DamageHp();
 		Hp_--;

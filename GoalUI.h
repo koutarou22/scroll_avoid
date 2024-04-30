@@ -10,6 +10,10 @@ private:
 
 	int Limitnow_;
 	int MaxLimit_;
+
+	int Timer_;
+	Transform tr = transform_;
+
 public:
 
 	GoalUI(GameObject* parent);
@@ -25,5 +29,8 @@ public:
 
 	//ŠJ•ú
 	void Release() override;
+
+	void SetLimit();
+
 };
 
