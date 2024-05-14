@@ -30,7 +30,7 @@
     <Filter Include="GameScene">
       <UniqueIdentifier>{7eb6993a-7a91-4967-ab3e-e8fc6d3d7155}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameObject">
+    <Filter Include="GameObj">
       <UniqueIdentifier>{cd8c24ef-150b-41d1-8403-ad8c29445d57}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -108,16 +108,16 @@
       <Filter>Sample</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="PlayScene.cpp">
       <Filter>GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="Road.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="TitleScene.cpp">
       <Filter>GameScene</Filter>
@@ -126,19 +126,19 @@
       <Filter>GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Wall.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="HP.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="ClearScene.cpp">
       <Filter>GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Frame.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
     <ClCompile Include="Gauge.cpp">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -215,16 +215,16 @@
       <Filter>Sample</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="PlayScene.h">
       <Filter>GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="Road.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="GameOverScene.h">
       <Filter>GameScene</Filter>
@@ -233,19 +233,19 @@
       <Filter>GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Wall.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="HP.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="ClearScene.h">
       <Filter>GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Frame.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
     <ClInclude Include="Gauge.h">
-      <Filter>GameObject</Filter>
+      <Filter>GameObj</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
