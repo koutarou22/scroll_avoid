@@ -78,11 +78,11 @@ void Player::OnCollision(GameObject* pTarget)
 	Debug::Log("Žc‚èHP=");
 	Debug::Log(Hp_);
 
-	//Camera::SetTarget({ 0.5, 2, 0 });
+	Camera::SetTarget({ 0.5, 2, 0 });
 
 	if (NDTIME_ <= 0.0f)
 	{
-		//Camera::SetTarget({ 0.53, 1.94, 0 });
+		Camera::SetTarget({ 0.53, 1.94, 0 });
 
 		hp->DamageHp();
 		Hp_--;
